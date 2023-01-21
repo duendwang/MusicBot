@@ -1,0 +1,8 @@
+version: '3'
+services:
+  musicbot:
+    image: eclipse-temurin:8u352-b08-jre
+    restart: on-failure
+    volumes:
+      - ./:/musicbot
+    command: ["/bin/bash","/musicbot/start.sh"]
